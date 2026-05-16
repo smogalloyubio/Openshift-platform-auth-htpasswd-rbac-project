@@ -47,6 +47,8 @@ This project uses OpenShift RBAC and groups to manage access to payment namespac
 - `RoleBinding` grants namespace-scoped permissions such as `edit` and `view`.
 - `ClusterRoleBinding` grants cluster-wide permissions, in this case `cluster-admin` for the `devop-team`.
 
+![user detail from htpasswd](https://github.com/smogalloyubio/Openshift-platform-auth-htpasswd-rbac-project/blob/main/screenshot/Screenshot%202026-05-16%20at%2008.43.05.png)
+
 ### Permissions in this setup:
 
 - `developer` group (`john-dev`) has `edit` access to `payment-dev`.
