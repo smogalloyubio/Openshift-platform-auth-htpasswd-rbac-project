@@ -28,7 +28,9 @@ It includes:
 - **Namespaces**:
   - `payment-dev`
   - `payment-test`
-  - `payment-prod` 
+  - `payment-prod`
+ 
+  ** [click here to  watch  user creation using htpasswd demo](https://drive.google.com/file/d/1bhL8Tk_m4PD9DRN74-n0TB7trpJgdPcJ/view?usp=sharing)
 
 ## Users & Groups Mapping
 
