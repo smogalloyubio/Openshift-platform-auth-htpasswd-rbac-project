@@ -64,8 +64,51 @@ This project uses OpenShift RBAC and groups to manage access to payment namespac
 
 ### 1. Create htpasswd File
 
-```bash
+```
 htpasswd -c -B -b users.htpasswd john-dev <password>
 htpasswd -B -b users.htpasswd sara-qa <password>
 htpasswd -B -b users.htpasswd emma-auditor <password>
 htpasswd -B -b users.htpasswd mike-devop <password>
+```
+### Create Secret in OpenShift
+```
+oc create secret generic htpasswd-secret \
+  --from-file=htpasswd=users.htpasswd \
+  -n openshift-config
+```
+### Configure OAuth with htpasswd Identity Provider
+```
+apiVersion: config.openshift.io/v1
+kind: OAuth
+metadata:
+  name: cluster
+spec:
+  identityProviders:
+  - name: htpasswd
+    mappingMethod: claim
+    type: HTPasswd
+    htpasswd:
+      fileData:
+        name: htpasswd-secret
+oc apply -f auth.yaml -n openshift-config
+
+```
+### Create Payment Namespaces
+
+```
+ oc create project payment-dev
+oc create project payment-test
+oc create project payment-prod
+```
+### Verification 
+```
+# Login as each user
+oc login -u john-dev -p admin 
+
+# Check permissions
+oc auth can-i get pods --as=john-dev -n payment-dev
+oc auth can-i create deployment --as=sara-qa -n payment-test
+oc auth can-i "*" "*" --as=mike-devop --all-namespaces
+
+```
+
