@@ -97,6 +97,7 @@ spec:
 oc apply -f auth.yaml -n openshift-config
 
 ```
+![user identity ](https://github.com/smogalloyubio/Openshift-platform-auth-htpasswd-rbac-project/blob/main/screenshot/Screenshot%202026-05-16%20at%2008.45.02.png)
 ### Create Payment Namespaces
 
 ```
