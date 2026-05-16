@@ -116,4 +116,4 @@ oc auth can-i create deployment --as=sara-qa -n payment-test
 oc auth can-i "*" "*" --as=mike-devop --all-namespaces
 
 ```
-
+![test user permission](https://github.com/smogalloyubio/Openshift-platform-auth-htpasswd-rbac-project/blob/main/screenshot/Screenshot%202026-05-16%20at%2009.06.24.png)
