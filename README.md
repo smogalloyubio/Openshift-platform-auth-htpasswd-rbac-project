@@ -105,6 +105,7 @@ oc apply -f auth.yaml -n openshift-config
 oc create project payment-test
 oc create project payment-prod
 ```
+![vedio  demo](https://drive.google.com/file/d/1sfD0f_MKaMiEFa4B41vIlLSJqW_oBhIb/view?usp=sharing)
 ### Verification 
 ```
 # Login as each user
