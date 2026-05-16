@@ -1,0 +1,1 @@
+# Openshift-platform-auth-htpasswd-rbac-project
