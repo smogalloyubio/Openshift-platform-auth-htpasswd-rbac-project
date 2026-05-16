@@ -72,6 +72,8 @@ htpasswd -B -b users.htpasswd sara-qa <password>
 htpasswd -B -b users.htpasswd emma-auditor <password>
 htpasswd -B -b users.htpasswd mike-devop <password>
 ```
+
+![login user ](https://github.com/smogalloyubio/Openshift-platform-auth-htpasswd-rbac-project/blob/main/screenshot/Screenshot%202026-05-16%20at%2008.43.05.png)
 ### Create Secret in OpenShift
 ```
 oc create secret generic htpasswd-secret \
