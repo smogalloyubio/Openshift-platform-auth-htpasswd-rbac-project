@@ -1,0 +1,27 @@
+apiVersion: user.openshift.io/v1
+kind: Group
+metadata:
+  name: developer
+users:
+  - john-dev
+---
+apiVersion: user.openshift.io/v1
+kind: Group
+metadata:
+  name: qa-team
+users:
+  - sara-qa
+---
+apiVersion: user.openshift.io/v1
+kind: Group
+metadata:
+  name: auditor
+users:
+  - emma-edit
+---
+apiVersion: user.openshift.io/v1
+kind: Group
+metadata:
+  name: devop-team
+users:
+  - mike-devop
